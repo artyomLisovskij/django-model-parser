@@ -9,7 +9,8 @@ Usage
 
 Example usage:
 
-    from parser import parse
+    from modelparser.parser import parse
+
     parse("""
 
     class Group(models.Model):
