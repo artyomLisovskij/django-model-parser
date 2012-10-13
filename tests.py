@@ -1,7 +1,7 @@
 import unittest
 import operator
 
-from modelparser.parser import parse
+from modelparser.parser import loads
 
 EMPTY_MODELS = """
 class Foo(models.Model):
@@ -26,16 +26,16 @@ class Foo(models.Model):
 class ModelParserTestCase(unittest.TestCase):
 
     def test_models(self):
-        models = parse(EMPTY_MODELS)
+        models = loads(EMPTY_MODELS)
         self.assertIn("Foo", models)
         self.assertIn("Bar", models)
 
     def test_non_model_classes(self):
-        models = parse(NON_MODEL_CLASS)
+        models = loads(NON_MODEL_CLASS)
         self.assertNotIn("FooBar", models)
 
     def test_model_fields(self):
-        model = parse(MODEL_WITH_FIELDS).get("Foo")
+        model = loads(MODEL_WITH_FIELDS).get("Foo")
         self.assertEqual(len(model), 2)
         field_names = map(operator.itemgetter("name"), model)
         self.assertIn("foo", field_names)
