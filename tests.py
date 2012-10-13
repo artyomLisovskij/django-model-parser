@@ -1,7 +1,7 @@
 import unittest
 import operator
 
-from parser import parse
+from modelparser.parser import parse
 
 EMPTY_MODELS = """
 class Foo(models.Model):
