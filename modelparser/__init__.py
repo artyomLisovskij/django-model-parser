@@ -1,1 +1,1 @@
-__author__ = 'fatiherikli'
+from parser import load, loads

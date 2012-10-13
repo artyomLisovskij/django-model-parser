@@ -9,9 +9,9 @@ Usage
 
 Example usage:
 
-    from modelparser import parser
+    import modelparser
 
-    print parser.loads("""
+    print modelparser.loads("""
 
     class Group(models.Model):
         name = models.CharField(max_length=255)
@@ -49,9 +49,9 @@ The result:
 
 And also you can parse file like objects:
 
-    from modelparser import parser
+    import modelparser
 
-    print parser.load(open("foo.py"))
+    print modelparser.load(open("foo.py"))
 
 
 
