@@ -1,7 +1,7 @@
 import ast
 from _ast import Call, Attribute, Name
 
-from constants import *
+from modelparser.constants import *
 
 
 class FieldVisitor(ast.NodeVisitor):
