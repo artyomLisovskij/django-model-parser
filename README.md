@@ -49,9 +49,9 @@ The result:
 
 And also you can parse file like objects:
 
-    from modelparser import load
+    from modelparser import parser
 
-    print load(open("foo.py"))
+    print parser.load(open("foo.py"))
 
 
 
