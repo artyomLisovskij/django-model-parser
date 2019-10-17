@@ -1,1 +1,1 @@
-from parser import load, loads
+from modelparser.parser import load, loads
